@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+import sys
+lines = map(str.strip, sys.stdin)
+
+last = ""
+for line in lines :
+    last = line
+
+print(last)
