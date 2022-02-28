@@ -17,5 +17,5 @@ elif len(sys.argv) == 2 :
 else :
     pass
 
-for x in range(start, stop, step+1) :
+for x in range(start, stop + 1, step) :
     print(x)
