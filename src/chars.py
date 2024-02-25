@@ -5,5 +5,5 @@ lines = map(str.strip, sys.stdin)
 
 lines = (field for line in lines for field in list(line))
 
-for line in lines :
+for line in lines:
     print(line)

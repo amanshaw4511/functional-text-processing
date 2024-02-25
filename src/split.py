@@ -7,5 +7,5 @@ lines = map(str.strip, sys.stdin)
 
 lines = (field for line in lines for field in line.split(delimeter))
 
-for line in lines :
+for line in lines:
     print(line)

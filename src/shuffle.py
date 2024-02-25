@@ -8,5 +8,5 @@ lines = list(lines)
 
 shuffle(lines)
 
-for _ in lines :
+for _ in lines:
     print(_)

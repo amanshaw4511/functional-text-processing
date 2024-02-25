@@ -8,6 +8,6 @@ lines = map(str.strip, sys.stdin)
 
 lines = map(float, lines)
 
-ans = min(lines, key=cmp_to_key(lambda _x,_y: eval(fn)))
+ans = min(lines, key=cmp_to_key(lambda _x, _y: eval(fn)))
 
 print(ans)

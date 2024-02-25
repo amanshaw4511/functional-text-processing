@@ -5,8 +5,8 @@ n = int(sys.argv[1])
 
 lines = map(str.strip, sys.stdin)
 
-for i,line in enumerate(lines):
-    if i < n :
+for i, line in enumerate(lines):
+    if i < n:
         print(line)
-    else :
+    else:
         break

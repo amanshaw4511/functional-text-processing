@@ -6,7 +6,7 @@ fn = sys.argv[1]
 
 lines = map(str.strip, sys.stdin)
 
-lines = sorted(lines, key=cmp_to_key(lambda _x, _y : eval(fn)))
+lines = sorted(lines, key=cmp_to_key(lambda _x, _y: eval(fn)))
 
-for _ in lines :
+for _ in lines:
     print(_)

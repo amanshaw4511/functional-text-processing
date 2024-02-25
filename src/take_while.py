@@ -8,5 +8,5 @@ lines = map(str.strip, sys.stdin)
 for _ in lines:
     if eval(fn):
         print(_)
-    else :
+    else:
         break

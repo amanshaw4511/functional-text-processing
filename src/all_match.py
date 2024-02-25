@@ -5,9 +5,9 @@ fn = sys.argv[1]
 
 lines = map(str.strip, sys.stdin)
 
-for _ in lines :
-    if eval(fn) :
+for _ in lines:
+    if eval(fn):
         continue
-    else :
+    else:
         exit()
 print(1)

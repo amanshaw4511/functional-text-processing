@@ -5,6 +5,6 @@ fn = sys.argv[1]
 
 lines = map(str.strip, sys.stdin)
 
-for _ in lines :
+for _ in lines:
     for each in eval(fn):
         print(each)

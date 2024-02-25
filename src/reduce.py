@@ -8,7 +8,7 @@ lines = map(str.strip, sys.stdin)
 
 
 _a = eval(init)
-for _i, _ in enumerate(lines) :
+for _i, _ in enumerate(lines):
     _a = eval(fn)
 
 print(_a)
