@@ -5,5 +5,5 @@ lines = map(str.strip, sys.stdin)
 
 lines = sorted(lines)
 
-for _ in lines:
+for it in lines:
     print(_)

@@ -1,16 +1,10 @@
 #!/usr/bin/python3
 import sys
-from common import get_lines_of_type
+from common import input_lines_with_type
 
 fn = sys.argv[1]
-type = ""
 
-if len(sys.argv) == 3:
-    type = get_lines_of_type(sys.argv[3])
+lines = input_lines_with_type()
 
-lines = map(str.strip, sys.stdin)
-if type:
-    lines = map(type, lines)
-
-for _i, _ in enumerate(lines):
+for i, it in enumerate(lines):
     print(eval(fn))

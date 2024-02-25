@@ -1,17 +1,9 @@
 import sys
-from typing import Iterable
+from typing import Iterable, Optional
 
 
-def get_lines() -> Iterable[str]:
+def input_lines() -> Iterable[str]:
     return map(str.strip, sys.stdin)
-
-
-def get_lines_int() -> Iterable[int]:
-    return map(int, get_lines())
-
-
-def get_lines_float() -> Iterable[float]:
-    return map(float, get_lines())
 
 
 def print_lines(lines: Iterable):
@@ -19,10 +11,16 @@ def print_lines(lines: Iterable):
         print(line)
 
 
-def get_lines_of_type(type_code: str):
-    if type_code == 'i':
-        return get_lines_int()
-    elif type_code == 'f':
-        return get_lines_float()
+def input_lines_with_type(arg_n: Optional[int] = 2) -> Iterable[str]:
+    if len(sys.argv) == arg_n + 1:
+        return map(get_type_fn(sys.argv[arg_n]), input_lines())
+    return input_lines()
+
+
+def get_type_fn(type_code: str):
+    if type_code == 'i' or type_code == 'int':
+        return int
+    elif type_code == 'f' or type_code == 'float':
+        return float
     else:
         raise Exception(f"invalid type code {type_code}")

@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 import sys
 
+from common import input_lines_with_type
+
 fn = sys.argv[1]
 init = sys.argv[2]
 
-lines = map(str.strip, sys.stdin)
+lines = input_lines_with_type(3)
 
 
-_a = eval(init)
-for _i, _ in enumerate(lines):
-    _a = eval(fn)
+acc = eval(init)
+for i, it in enumerate(lines):
+    acc = eval(fn)
 
-print(_a)
+print(acc)

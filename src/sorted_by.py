@@ -8,5 +8,5 @@ lines = map(str.strip, sys.stdin)
 
 lines = sorted(lines, key=cmp_to_key(lambda _x, _y: eval(fn)))
 
-for _ in lines:
+for it in lines:
     print(_)

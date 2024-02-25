@@ -7,6 +7,6 @@ lines = map(str.strip, sys.stdin)
 
 lines = list(lines)
 
-for _ in range(n) :
-    for line in lines :
+for it in range(n):
+    for line in lines:
         print(line)

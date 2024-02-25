@@ -5,7 +5,7 @@ fn = sys.argv[1]
 
 lines = map(str.strip, sys.stdin)
 
-for _ in lines:
+for it in lines:
     if eval(fn):
         print(1)
         break

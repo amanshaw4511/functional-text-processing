@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 import sys
+from common import input_lines_with_type
 
 fn = sys.argv[1]
 
-lines = map(str.strip, sys.stdin)
+lines = input_lines_with_type()
 
-for _i, _ in enumerate(lines):
+for i, it in enumerate(lines):
     if eval(fn):
-        print(_)
+        print(it)
