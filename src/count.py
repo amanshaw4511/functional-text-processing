@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-import sys
+from common import input_lines_with_type
 
-lines = map(str.strip, sys.stdin)
+lines = input_lines_with_type()
 
-count = 0
-for line in lines:
-    count += 1
-
-print(count)
+print(len(list(lines)))

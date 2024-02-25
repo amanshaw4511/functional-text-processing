@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import sys
+from common import input_lines_with_type, if_arg_else_throw
 
-fn = sys.argv[1]
+fn = if_arg_else_throw(1)
 
-lines = map(str.strip, sys.stdin)
+lines = input_lines_with_type(2)
 
 for it in lines:
     if eval(fn):
         continue
-    print(_)
+    print(it)

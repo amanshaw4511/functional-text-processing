@@ -7,5 +7,5 @@ lines = map(str.strip, sys.stdin)
 
 for it in lines:
     if eval(fn):
-        print(_)
+        print(it)
         break

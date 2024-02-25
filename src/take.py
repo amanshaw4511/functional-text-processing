@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-import sys
+from common import input_lines_with_type, if_arg_else_throw
 
-n = int(sys.argv[1])
+n = int(if_arg_else_throw(1))
 
-lines = map(str.strip, sys.stdin)
+lines = input_lines_with_type()
 
 for i, line in enumerate(lines):
-    if i < n:
-        print(line)
-    else:
+    if i >= n:
         break
+
+    print(line)

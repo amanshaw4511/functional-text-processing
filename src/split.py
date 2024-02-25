@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import sys
+from common import *
 
-delimeter = sys.argv[1]
+delimeter = if_arg_else(1, "")
 
-lines = map(str.strip, sys.stdin)
-
-lines = (field for line in lines for field in line.split(delimeter))
+lines = input_lines_with_type()
 
 for line in lines:
-    print(line)
+    fields = line.split(delimeter) if delimeter != "" else list(line)
+    for field in fields:
+        print(field)

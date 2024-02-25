@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 import sys
-from common import input_lines_with_type
+from common import input_lines_with_type, if_arg_else_throw
 
-fn = sys.argv[1]
+fn = if_arg_else_throw(2)
 
-lines = input_lines_with_type()
+lines = input_lines_with_type(2)
 
 for i, it in enumerate(lines):
     print(eval(fn))

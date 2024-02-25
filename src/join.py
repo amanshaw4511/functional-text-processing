@@ -2,10 +2,10 @@
 
 from common import *
 
-joinby = " "
-if len(sys.argv) > 1:
-    joinby = sys.argv[1]
+joinby = if_arg_else(1, " ")
+prefix = if_arg_else(2, "")
+postfix = if_arg_else(3, "")
 
-lines = get_lines()
+lines = input_lines_with_type()
 
-print(joinby.join(lines))
+print(prefix + joinby.join(lines) + postfix)

@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-import sys
+from common import *
 
-n = int(sys.argv[1])
+n = int(if_arg_else(1, 1))
 
-lines = map(str.strip, sys.stdin)
+lines = input_lines_with_type()
 
 lines = list(lines)
-
-for it in range(n):
+for _ in range(n):
     for line in lines:
         print(line)

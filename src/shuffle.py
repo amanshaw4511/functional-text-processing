@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-import sys
 from random import shuffle
+from common import input_lines_with_type
 
-lines = map(str.strip, sys.stdin)
+lines = input_lines_with_type()
 
 lines = list(lines)
 
 shuffle(lines)
 
 for it in lines:
-    print(_)
+    print(it)

@@ -8,5 +8,5 @@ stop = sys.argv[3]
 _init = eval(start)
 _ = _init
 while (eval(stop)):
-    print(_)
+    print(it)
     _ = eval(step)
